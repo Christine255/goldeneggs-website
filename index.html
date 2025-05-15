@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoldenEggs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fffaf1;
+      color: #000;
+    }
+
+    header {
+      background-color: #ffdf70;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-family: 'Merienda', cursive;
+      color: #000;
+    }
+
+    nav {
+      background: #ffe6a7;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      border-bottom: 2px dashed #ffd36e;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff8c00;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #000;
+    }
+
+    .product {
+      background: #fff3da;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 2px solid #ffe2a9;
+      border-radius: 10px;
+      color: #000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .product h3 {
+      margin-top: 0;
+      color: #000;
+    }
+
+    .contact {
+      background: #fff0c4;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      border: 1px dashed #ffd87a;
+      color: #000;
+    }
+
+    .contact a {
+      color: #000;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      background-color: #ffdf70;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      animation: bounce 2s infinite;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #000;
+      background-color: #fff3d6;
+      margin-top: 2rem;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .icon {
+      margin-right: 0.5rem;
+      color: #f7a200;
+      animation: pulse 2s infinite;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-egg icon"></i>GoldenEggs</h1>
+    <p>Farm-fresh eggs delivered to your doorstep!</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="about">
+      <h2 class="section-title"><i class="fas fa-chicken icon"></i>About Us</h2>
+      <p>We deliver fresh, organic, free-range eggs from our local farm straight to your door. No chemicals, no stress — just tasty, healthy eggs laid by happy hens.</p>
+    </section>
+
+    <section id="products">
+      <h2 class="section-title"><i class="fas fa-box icon"></i>Our Eggs</h2>
+
+      <div class="product">
+        <h3>Standard Tray (30 Eggs)</h3>
+        <p>KES 450 – Clean, fresh medium-sized eggs.</p>
+      </div>
+
+      <div class="product">
+        <h3>Large Tray (30 Eggs)</h3>
+        <p>KES 500 – Bigger eggs, same great taste.</p>
+      </div>
+
+      <div class="product">
+        <h3>Weekly Subscription</h3>
+        <p>KES 1,800 – 4 trays delivered every week. Save money & time!</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title"><i class="fas fa-phone icon"></i>Contact Us</h2>
+      <div class="contact">
+        <p><strong>Call or WhatsApp:</strong></p>
+        <a href="https://wa.me/254726223716?text=Hello%20GoldenEggs,%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp icon"></i>+254726223716
+        </a>
+        <p><strong>Email:</strong> matndu5@gmail.com</p>
+        <p><strong>Delivery:</strong> We deliver all across Thika and its environs</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 GoldenEggs. All rights reserved.
+  </footer>
+</body>
+</html>
